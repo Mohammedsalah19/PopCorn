@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تسجيل الدخول</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Fontawesome library -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+
+
+    <!-- Fontawesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Cairo', sans-serif;
+            background-attachment: fixed;
+        }
+
+        .fixed-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body style="align-content:center">
+    <div class="fixed-bg py-5" style="background-image: url('https://source.unsplash.com/random');min-height:100vh;">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="container d-flex justify-content-center ">
+                    <div class=" col-md-6 border border-primary rounded shadow p-5" style="background-color:white;opacity:.9;">
+
+                        <div style="" class="d-flex justify-content-center ">
+                         </div>
+
+                        @using (Html.BeginForm("login","admin"))
+                        {
+                            @Html.AntiForgeryToken()
+                            <Center>
+                                <div class="form-horizontal">
+                                    <h4>@*AdminAccounts*@</h4>
+                                    <center>
+                                        <br />
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <label> Username</label>
+                                        <br />
+                                        <input type="text" name="username" class="form-control" />
+                                        <div class="input-group-prepend">
+                                             
+                                        </div>
+
+                                        <label> Pasword</label>
+                                        <br />
+                                        <input type="password" name="password" class="form-control" />
+                                        <div class="input-group-prepend">
+                                     
+                                        </div>
+
+                                        <br />
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-12">
+                                                <input type="submit" value="الدخول" class="btn font-weight-bold  btn-outline-primary" />
+                                            </div>
+                                        </div>
+                                    </center>
+
+                                </div>
+                            </Center>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            function shwp() {
+                debugger
+                var x = document.getElementById("pw");
+                if (x.type == "password") {
+                    x.type = "text";
+                }
+
+                else { x.type = "password"; }
+            }
+
+
+        </script>
+
+
+
+
+    </div>
+
+</body>
+</html>

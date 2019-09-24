@@ -1,0 +1,44 @@
+﻿@model PopCorn.Models.FilmAttributes
+
+ <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+ <!-- Page Content -->
+
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <center>
+
+        <h1 class="my-4">
+            @Model.Title
+            <small>@Model.Genre (@Model.Year)</small>
+        </h1>
+    </center>
+    <br />
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-6">
+            <center>
+                <img class="img-responsive" src="@Url.Content(Model.Poster)" style="" />
+            </center>
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="my-3">Total Seasons: @Model.totalSeasons</h3>
+            <p> @Model.Plot</p>
+            <h3 class="my-3"> Details</h3>
+            <ul>
+                <li> <b>Rate:</b> @Model.imdbRating (@Model.imdbVotes Vote)</li>
+                <li><b>Awards:</b> @Model.Awards</li>
+                <li><b>Actors:</b> @Model.Actors</li>
+            </ul>
+            <center>
+                <b><a href="https://www.imdb.com/title/@Model.imdbID" target="_blank">IMDB Page</a> </b>
+            </center>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- /.container -->

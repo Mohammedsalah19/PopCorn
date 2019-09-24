@@ -1,0 +1,86 @@
+﻿@model IEnumerable< PopCorn.Models.DAL.Messages>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<link href="~/Content/Tempelet/blue.css" rel="stylesheet" />
+<link href="~/Content/Tempelet/style.css" rel="stylesheet" />
+
+<!-- Dashboard Content
+    ================================================== -->
+<div class="dashboard-content-container" data-simplebar>
+    <div class="dashboard-content-inner">
+
+        <!-- Fun Facts Container -->
+        <!-- Last one has to be hidden below 1600px, sorry :( -->
+        <div class="fun-fact" data-fun-fact-color="#2a41e6" style="margin-right: 0px;margin-left: 30px;">
+            <div class="fun-fact-text">
+                <center>
+                    <span>معدل الزيارات اليومية</span>
+                </center>
+                <h4 style="text-align:center">
+                    <!-- hitwebcounter Code START -->
+                    <a href="http://www.hitwebcounter.com" target="_blank">
+                        <img src="http://hitwebcounter.com/counter/counter.php?page=7141078&style=0010&nbdigits=5&type=page&initCount=0" title="web page hit counters codes Free" Alt="web page hit counters codes Free" border="0">
+                    </a>                                        <br />
+                    <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title=""
+                                                 target="_blank" style="font-family: ;
+                                        font-size: px; color: #; text-decoration:  ;">
+                                                                
+                    </a>
+
+                </h4>
+            </div>
+            <div class="fun-fact-icon"><i class="icon-feather-trending-up"></i></div>
+        </div>
+    </div>
+
+</div>
+
+<br />
+<hr />
+<center>
+    <h3>Messages</h3>
+</center>
+
+<div class="">
+    <table id="dtBasicExample" class="table table-hover table-striped table-bordered" style="text-align:center" cellspacing="0" width="100%">
+        <thead>
+            <tr class="table-heading" style="background-color:#40BCBA">
+                <th>
+                    الرساله
+                </th>
+                <th>
+                    الاسم  
+                </th>
+                <th>
+                    الرقم التسلسلى
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Messaage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MessageID)
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<br />
+<center>
+    <a href="~/Admin/logOff" class="btn btn-info">logout</a>
+ </center>

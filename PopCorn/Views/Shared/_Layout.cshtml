@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORREST GUMP</title>
+    <link rel="icon" href="~/logo.jpg" type="image/png" />
+
+    <script src="~/Content/jquery-3.3.1.min.js"></script>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- OwlCarousel 2-2.3.4 library -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js" data-auto-replace-svg="nest"></script>
+
+    <style>
+
+        * {
+            font-family: Cairo,Aldhabi !important;
+        }
+
+        a:hover {
+            color: #17a2b8 !important;
+            text-decoration: none;
+        }
+
+        .photo-box {
+            color: #17a2b8 !important;
+        }
+    </style>
+</head>
+<body>
+ 
+    <nav class="navbar navbar-expand-lg navbar-dark  static-top" style="top:0px">
+        <div class="container">
+            <a class="navbar-brand" href="~/FIlM/Index">
+                <img src="~/logo.jpg" id="logo" class="icon-box" style="height:45px;width:60px;border:2px solid #808080; border-radius:8px" alt="">
+            </a>
+
+            <a class="navbar-brand" href="~/FIlM/Messages">
+                <img src="~/message.png" id="logo" class="icon-box" style="height:45px;width:60px;border:2px solid #808080; border-radius:8px" alt="">
+            </a>
+        </div>
+    </nav>
+
+ 
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <center>
+            <footer>
+                 <p>&copy; @DateTime.Now.Year - <a href="https://www.facebook.com/MhammedSalah19">Mohammed Salah</a> </p>
+            </footer>
+        </center>
+    </div>
+
+ </body>
+</html>
+ 
